@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "alipayOpenapiCpp", "alipayOpenapiCpp.vcxproj", "{9357AB9D-98C3-496C-91D4-ABC909C91682}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AliPayWin32", "AliPayWin32\AliPayWin32.vcxproj", "{D6DF5726-3F11-4F63-AA05-4A1D4F9391CA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DllTest", "DllTest\DllTest.vcxproj", "{56066D96-E18A-4D7B-8C53-42AF4E3E63AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{9357AB9D-98C3-496C-91D4-ABC909C91682}.Debug|Win32.Build.0 = Debug|Win32
 		{9357AB9D-98C3-496C-91D4-ABC909C91682}.Release|Win32.ActiveCfg = Release|Win32
 		{9357AB9D-98C3-496C-91D4-ABC909C91682}.Release|Win32.Build.0 = Release|Win32
+		{D6DF5726-3F11-4F63-AA05-4A1D4F9391CA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D6DF5726-3F11-4F63-AA05-4A1D4F9391CA}.Debug|Win32.Build.0 = Debug|Win32
+		{D6DF5726-3F11-4F63-AA05-4A1D4F9391CA}.Release|Win32.ActiveCfg = Release|Win32
+		{D6DF5726-3F11-4F63-AA05-4A1D4F9391CA}.Release|Win32.Build.0 = Release|Win32
+		{56066D96-E18A-4D7B-8C53-42AF4E3E63AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{56066D96-E18A-4D7B-8C53-42AF4E3E63AF}.Debug|Win32.Build.0 = Debug|Win32
+		{56066D96-E18A-4D7B-8C53-42AF4E3E63AF}.Release|Win32.ActiveCfg = Release|Win32
+		{56066D96-E18A-4D7B-8C53-42AF4E3E63AF}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

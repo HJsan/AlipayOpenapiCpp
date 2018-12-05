@@ -1,0 +1,8 @@
+/ipch
+
+/AliPayWin32
+/*.sdf
+
+/build/Debug
+/build/Release
+/AliPayWin32/Debug

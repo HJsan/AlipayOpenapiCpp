@@ -9,9 +9,10 @@ using namespace std;
 
 /** ++++++++++++++++++++++++++++++++++++++++++++++++ **/
 /** 此处替换为开发者在支付宝开放平台申请的应用ID **/
-string appId = "2016000066668888";
+string appId = "2016092000553917";
 
 /** 此处替换为开发者使用openssl生成的rsa私钥 **/
+/*
 string pKey = "-----BEGIN RSA PRIVATE KEY-----\n"
 		"MIICXQIBAAKBgQDTI0/RaV/YKWDGbKkQGYpD9I/UljBCCf3rWm09sXiif8MN5rLA\n"
 		"3TjC4gZ478n6Dys5yO23h1HGVTWu+mQ8071+pwLHGQ+dyDNrGWR89VLb9yanOeRf\n"
@@ -27,15 +28,52 @@ string pKey = "-----BEGIN RSA PRIVATE KEY-----\n"
 		"4Il5JN3fFPUMssu06h0CQQCGBdmtRLi+9ws57qTPHR/BdHGUxdBRWllc9sGVVaRw\n"
 		"+EOMGXus6/BssTRjwplx7w8uUR0U3s1KYDJMHMCjW25x\n"
 		"-----END RSA PRIVATE KEY-----";
+*/
+string pKey = "-----BEGIN RSA PRIVATE KEY-----\n"
+"MIIEowIBAAKCAQEAwMeDhHkpTz0kNpSozsGDgrIaD4SFuGj9OXwahNBPBOh2u\
+UZ2t8JyQPBHmvCDYPU4bMq/dwpWFtBzJ5Wd++4q+3/QfjcXuGUtcHZ/k146Iho\
+jnmnusGODk2sFivGYbooRN9IBYvU/9y+mNev0rnxekirJoN+yZigG0SdKG5nYSD\
+cyPv/UjG+/Fofo15+ZVB+DYwunWSR4wm5kKTc3EWHJoP7D6OiSvZOgZcqKAuqDfi\
+ZtnJirxpQA5qdUhbqQf7jK+8MMQ356Pt7SfMr8SV9af5QHdLvLh63WIQThS/p/DBT\
+57/CHbIL9SdQyzI2aDbV8aJM/ou+mlyB2xXYX01INywIDAQABAoIBABo+jx8Hx6Hr\
+9vQfROPw4FB4oqeeKP4z/NVImeue2EMYyqDqgNr/c8J3c6gaOiiG+cmFyI8SLyon8q\
+Ve7wUPJXbbrayhH2+RBqCa4T9UwqFF4bd9QGtvAMie90A1J8VUsodg5aNtM+oY6I3K\
+s6LVd6J6hLyL96OEq3jp2mLrjNA3xtNZFWFKqnCHPSmzZgf7Egg523kEFBjEKsy+KV\
+pQqfcplj0PBysX/pjeAY1KJ3SI84vckGMPX+9E2406p1XC89hnAuoA2daaXAj2baU\
+vxUrvzO6A/83WxmOaXPnWvb4gmZFkFn9SqR3UI+2gtPaWk6P6GtDi7OVap7RY39Mh\
+8oECgYEA7h/8iMsyMQN+c7+lrTB+sYKW0+t78mupaPjAk0e/GpklttczQdC62Yqv/\
+WiH1q1B+eF7Y/kPKSH5GLOSsX0RMoIQqT2ff6FYo3BAV3oMkNofqowe1idzp60r3m\
+prM0eBxySStQHCp25/NSZ9O/hzBZUC6yBziYvdTZqvLEN3mqECgYEAz0AgmXHubVR\
+3axTcfbBAEPblxUlJzjg7fwlpyFQ5BxDtf2viEiQiPXLQy7+F1NoQAYJMgJGOoJoF\
+F8el7rjntRJ95eROite1R5KGb+kp+OmKZywLPvp3ARtHdpDiAGUTEE43jGw1ytpvZ\
+TzMooH2XQtLCsweaHEFYgIS1lQtnOsCgYBbXdaNvjmB6O9KBkzRiPvzrEGnCoHCYG\
+DeMCPj3vGKiRyZbTTzmd03vykLuGH2kv/vmv63O0b/51MmkTBF/dDtak5uQYDDfer\
++uwFVDzVnFupzi9QBI54SxjVA3+BGCrfW60eHQCeqCpGwmRYQPqITkDtQcGEkc4/0\
+SNfRyglIQQKBgBoCoVTAsLy16hrdTmLT2OaIJgQhk4q3Efh6lPUYZOPXIwdn4cKHG\
+Gj/3OaFTeWNzI5z7OgB3JWZXuRCITgZqrLV9EkC4zyXn9+wqwCmkab0oHMcWvj3dD\
+IGW2ys+EA2bzMPrfcIqaOg0HQzMjd++g1pWmyre3F+Jb/MJNMTU3orAoGBAKJ9Dxl\
+CRQpivNihb+OBl4gdgdET1C+mpm5Gx1yXwZ1j++jrzjK4XPnvzlOW1DebaYyon8XK\
+Y/VLsO8x6btDAoGqtELGB0XLBJiL6QiXH/MKwB4jONj0DfGCUgLo1S3LudO8NRL7t\
+ILl3BILl4hazbWR1pHOnmtvLKxpD/KQqUW8\n"
+"-----END RSA PRIVATE KEY-----";
 
 /** 支付宝公钥，用来验证支付宝返回请求的合法性 **/
-string aliPubKey = "-----BEGIN PUBLIC KEY-----\n"
+/*string aliPubKey = "-----BEGIN PUBLIC KEY-----\n"
         "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDI6d306Q8fIfCOaTXyiUeJHkr\n"
         "IvYISRcc73s3vF1ZT7XN8RNPwJxo8pWaJMmvyTn9N4HQ632qJBVHf8sxHi/fEsra\n"
         "prwCtzvzQETrNRwVxLO5jVmRGi60j8Ue1efIlzPXV9je9mkjzOmdssymZkh2QhUr\n"
         "CmZYI/FCEa3/cNMW0QIDAQAB\n"
         "-----END PUBLIC KEY-----";
-
+*/
+string aliPubKey = "-----BEGIN PUBLIC KEY-----\n"
+"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsf1q4lvF4PGW\
+Kf8fybrscUsIkbjvro/PzaT4pK6NyvBSO6jHc+bzUJVdTz43UCurON48jg\
+ooQ8Vl2HiDviSrcev1hV971xdKQlGuqV5sK7Vjn5K4I1fYiI4zFPlTzHs2\
+HmFBFD1i9iDlSS+f1G+femnY0RXSPKSiOcDVxucW2jsfd/qtwGMxrY5EeU\
+9L49CHoo5mr8/XWwn02lwxnSdKpjFHM73Y4TSg4sbF5UMapSA5fCIX6bW/\
+CLx3i1oqMIlFz1zUYzf7iicaMCr2KEllQ1RI9FgaoH37pR0013R8+2YKIW\
+c6ur96QTk3M9SLXsC4H+04jji2y3hWKcp3dJa8uQIDAQAB\n"
+"-----END PUBLIC KEY-----";
 /** 注：appid，私钥，支付宝公钥等信息建议不要写死在代码中 **/
 /** 这些信息应以配置等方式保存，此处写在代码中只是为了示例的简便 **/
 /** ++++++++++++++++++++++++++++++++++++++++++++++++ **/
